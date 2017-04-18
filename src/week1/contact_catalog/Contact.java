@@ -6,13 +6,10 @@ package week1.contact_catalog;
  */
 public class Contact {
 
-
     private String name;
     private String phone;
     private static final int NUM_LENGHT = 13;
     private static final String startPref = "+380";
-
-
 
     public boolean initContact(String name, String phone) {
         if (chekPhoneNumber(phone) || chekName(name)) {

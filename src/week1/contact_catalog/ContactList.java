@@ -27,6 +27,7 @@ public class ContactList {
         return result;
     }
 
+
     public void showAllContacts (){
         System.out.println(asString());
     }

@@ -18,8 +18,6 @@ public class TestContactList {
         Contact contact2 = new Contact();
         contact1.initContact("Iv", "+380678252287");
 
-        System.out.println(contact1.asString());
-
         contactList.addContact(contact);
         contactList.addContact(contact1);
         contactList.addContact(contact2);
