@@ -12,18 +12,20 @@ public class Contact {
     private static final int NUM_LENGHT = 13;
     private static final String startPref = "+380";
 
+
+
+    public boolean initContact(String name, String phone) {
+        if (chekPhoneNumber(phone) || chekName(name)) {
+            this.name = name;
+            this.phone = phone;
+            return true;
+        }
+        return false;
+        }
+
     public Contact() {
 
     }
-
-    public boolean initContact(String name, String phone) {
-        if (!chekPhoneNumber(phone)) {
-            return false;
-        }
-        this.name = name;
-        this.phone = phone;
-        return true;
-        }
 
     public boolean chekPhoneNumber (String phone) {
         if (phone == null) return false;
@@ -36,6 +38,11 @@ public class Contact {
                 return false;
             }
         }
+        return true;
+    }
+
+    public boolean chekName (String name) {
+        if (name == null) return false;
         return true;
     }
 

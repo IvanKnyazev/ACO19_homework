@@ -11,14 +11,12 @@ public class ContactList {
     private int size = 0;
     private int count = 1;
 
-
     public boolean addContact(Contact contact) {
         if (contact.initContact(null, null)) return false;
         if (size == SIZE_CONTACTLIST) return false;
         list[size++] = contact;
         return true;
     }
-
 
     public String asString(){
         String result = "CONTACT LIST\nAll Contacts\n";
