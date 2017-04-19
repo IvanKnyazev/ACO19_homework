@@ -9,6 +9,7 @@ public class TestContactList {
 
         ContactList contactList = new ContactList();
 
+
         Contact contact = new Contact();
         contact.initContact("Ivan", "+380678252255");
 
@@ -16,7 +17,7 @@ public class TestContactList {
         contact1.initContact("Ivan", "+38067825228y");
 
         Contact contact2 = new Contact();
-        contact1.initContact("Iv", "+380678252287");
+        contact2.initContact("Iv", "+380678252287");
 
         contactList.addContact(contact);
         contactList.addContact(contact1);
