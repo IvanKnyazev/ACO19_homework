@@ -15,6 +15,7 @@ public class Contact {
         if (!chekPhoneNumber(phone) || !chekName(name)) {
             return false;
         }
+        
         this.name = name;
         this.phone = phone;
         return true;
