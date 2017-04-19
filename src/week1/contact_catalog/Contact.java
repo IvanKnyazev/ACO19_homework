@@ -12,17 +12,13 @@ public class Contact {
     private static final String startPref = "+380";
 
     public boolean initContact(String name, String phone) {
-        if (chekPhoneNumber(phone) || chekName(name)) {
-            this.name = name;
-            this.phone = phone;
-            return true;
+        if (!chekPhoneNumber(phone) || !chekName(name)) {
+            return false;
         }
-        return false;
+        this.name = name;
+        this.phone = phone;
+        return true;
         }
-
-    public Contact() {
-
-    }
 
     public boolean chekPhoneNumber (String phone) {
         if (phone == null) return false;
