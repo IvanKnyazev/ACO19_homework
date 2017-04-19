@@ -16,6 +16,7 @@ public class Contact {
             return false;
         }
 
+        
         this.name = name;
         this.phone = phone;
         return true;
