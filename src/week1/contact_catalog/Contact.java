@@ -8,25 +8,23 @@ public class Contact {
 
     private String name;
     private String phone;
+
     private static final int NUM_LENGHT = 13;
     private static final String startPref = "+380";
 
-    public boolean initContact(String name, String phone) {
-        if (!chekPhoneNumber(phone) || !chekName(name)) {
-            return false;
+    public Contact(String name, String phone) {
+        if (chekPhoneNumber(phone) && chekName(name)) {
+            this.name = name;
+            this.phone = phone;
         }
-
-        
-        this.name = name;
-        this.phone = phone;
-        return true;
-        }
-
+    }
 
     public boolean chekPhoneNumber (String phone) {
+
         if (phone == null) return false;
         if (phone.length() != NUM_LENGHT) return false;
         if (!phone.startsWith(startPref, 0)) return false;
+
         char[] chArrPhone = phone.toCharArray();
         if (chArrPhone[0] != 43) return false;
         for (int i = 1; i < phone.length(); i++) {
@@ -39,6 +37,7 @@ public class Contact {
 
     public boolean chekName (String name) {
         if (name == null) return false;
+        if (name == "") return false;
         return true;
     }
 

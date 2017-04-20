@@ -10,22 +10,19 @@ public class TestContactList {
         ContactList contactList = new ContactList();
 
 
-        Contact contact = new Contact();
-        contact.initContact("Ivan", "+380678252255");
+        Contact contact = new Contact("Ivan", "+380678252255");
 
-        Contact contact1 = new Contact();
-        contact1.initContact("Ivan", "+38067825228y");
+        Contact contact1 = new Contact("Ivan", "+38067825228y");
 
-        Contact contact2 = new Contact();
-        contact2.initContact("Iv", "+380678252287");
+        Contact contact2 = new Contact("", "+380678252287");
 
         contactList.addContact(contact);
         contactList.addContact(contact1);
         contactList.addContact(contact2);
 
-        System.out.println();
-
         contactList.showAllContacts();
+
+//        contactList.removeLast();
 
 
     }
